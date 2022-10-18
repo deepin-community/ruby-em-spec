@@ -1,0 +1,32 @@
+Source: ruby-em-spec
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper (>= 9~),
+               gem2deb,
+               rake,
+               ruby-eventmachine (>= 1.0.3-4~),
+               ruby-rspec
+Standards-Version: 3.9.8
+Vcs-Git: https://anonscm.debian.org/git/pkg-ruby-extras/ruby-em-spec.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/ruby-em-spec.git
+Homepage: https://github.com/joshbuddy/em-spec
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+
+Package: ruby-em-spec
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-eventmachine,
+         ruby-rspec | ruby-bacon | ruby-test-unit,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: BDD for Ruby/EventMachine
+ Simple BDD API for testing asynchronous Ruby/EventMachine code.
+ .
+ em-spec can be used with either bacon, test unit or rspec.
+ .
+ See /usr/share/doc/ruby-em-spec/README.rdoc for more details on
+ how to use it with your code.

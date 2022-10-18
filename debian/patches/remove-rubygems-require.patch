@@ -1,0 +1,26 @@
+Description: Remove rubygems
+ Dependencies are tracked in debian/control and
+ managed by apt
+Author: Praveen Arimbrathodiyil <praveen@debian.org>
+Last-Update: 2013-05-28
+
+--- a/lib/em-spec/bacon.rb
++++ b/lib/em-spec/bacon.rb
+@@ -1,6 +1,9 @@
+ require File.dirname(__FILE__) + '/../ext/fiber18'
+-require 'rubygems'
++# dependencies are added in debian/control
++# require 'rubygems'
++
+ require 'eventmachine'
++require 'bacon'
+ 
+ module EventMachine
+   
+@@ -93,4 +96,4 @@
+       $em_spec_fiber.resume if $em_spec_fiber
+     }
+   end
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,32 @@
+From c3f360866d189673b6b3293f1cb940ecadd9ac8e Mon Sep 17 00:00:00 2001
+From: Srihari <srih4ri@gmail.com>
+Date: Sat, 23 Mar 2013 23:26:31 +0530
+Subject: [PATCH] Fix failing test for timeout.
+
+---
+ test/test_spec.rb | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/test/test_spec.rb b/test/test_spec.rb
+index e79b619..f356daa 100644
+--- a/test/test_spec.rb
++++ b/test/test_spec.rb
+@@ -66,7 +66,7 @@ class EmSpecWithTimeoutTest < Test::Unit::TestCase
+   
+   include EventMachine::Test
+ 
+-  default_timeout 2
++  default_timeout 4
+ 
+   def test_should_fail_to_timeout
+     EM.add_timer(3) {
+@@ -95,4 +95,4 @@ class AnotherNormalTest < Test::Unit::TestCase
+   def test_normal
+     assert_equal 1, 1
+   end
+-end
+\ No newline at end of file
++end
+-- 
+1.8.1.5
+
