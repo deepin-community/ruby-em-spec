@@ -1,3 +1,10 @@
+ruby-em-spec (0.2.7-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 14 Jun 2022 15:22:54 +0200
+
 ruby-em-spec (0.2.7-1) unstable; urgency=medium
 
   [ Lucas Albuquerque Medeiros de Moura ]
